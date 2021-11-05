@@ -37,7 +37,7 @@ sudo ufw deny out from any to 192.168.0.0/16 > /dev/null
 sudo ufw deny out from any to 100.64.0.0/10 > /dev/null
 sudo ufw deny out from any to 198.18.0.0/15 > /dev/null
 sudo ufw deny out from any to 169.254.0.0/16 > /dev/null
-sudo ufw -q --force enable > /dev/null
+sudo ufw --force enable > /dev/null
 
 echo -e "\033[35m"
 apt-get -qq install mc wget jq libfontconfig1 libxtst6 libxrender1 libxi6 java-common -y > /dev/null
