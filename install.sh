@@ -21,10 +21,11 @@ echo -ne "\033[35m╚═╝░░╚═╝░╚════╝░  "
 echo -e "\033[34m░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░░░░╚═╝░░░░╚════╝░"
 
 echo -e "\033[35m"
-echo -e "-----------------------------------------------------------------------"
+echo -e "--------------------------------------------------------------------"
 echo -e "https://t.me/ro_cryptoo"
 echo -e "https://t.me/whitelistx1000"
-echo -e "-----------------------------------------------------------------------"
+echo -e "--------------------------------------------------------------------"
+echo -e ""
 
 echo -e "Installing..."
 sudo apt  update > /dev/null
@@ -36,14 +37,14 @@ sudo ufw deny out from any to 192.168.0.0/16 > /dev/null
 sudo ufw deny out from any to 100.64.0.0/10 > /dev/null
 sudo ufw deny out from any to 198.18.0.0/15 > /dev/null
 sudo ufw deny out from any to 169.254.0.0/16 > /dev/null
-sudo ufw --force enable
+sudo ufw --force enable > /dev/null
 
 echo -e "\033[35m"
 apt  install mc wget jq libfontconfig1 libxtst6 libxrender1 libxi6 java-common -y > /dev/null
 wget -q  https://cdn.azul.com/zulu/bin/zulu11.48.21-ca-jdk11.0.11-linux_amd64.deb
 dpkg -i zulu11.48.21-ca-jdk11.0.11-linux_amd64.deb > /dev/null
 wget -q https://github.com/minima-global/Minima/raw/master/jar/minima.jar
-sudo apt -qq  install --fix-broken -y
+sudo apt -qq  install --fix-broken -y  > /dev/null
 sudo tee <<EOF >/dev/null /etc/systemd/journald.conf
 Storage=persistent
 EOF
