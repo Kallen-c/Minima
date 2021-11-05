@@ -28,8 +28,8 @@ echo -e "--------------------------------------------------------------------"
 echo -e ""
 
 echo -e "Installing..."
-sudo apt  update > /dev/null
-sudo apt  install ufw -y > /dev/null
+sudo apt -qq update > /dev/null
+sudo apt -qq install ufw -y > /dev/null
 sudo ufw allow 22:65535/tcp > /dev/null
 sudo ufw allow 22:65535/udp > /dev/null
 sudo ufw deny out from any to 10.0.0.0/8 > /dev/null
@@ -40,7 +40,7 @@ sudo ufw deny out from any to 169.254.0.0/16 > /dev/null
 sudo ufw --force enable > /dev/null
 
 echo -e "\033[35m"
-apt  install mc wget jq libfontconfig1 libxtst6 libxrender1 libxi6 java-common -y > /dev/null
+apt -qq install mc wget jq libfontconfig1 libxtst6 libxrender1 libxi6 java-common -y > /dev/null
 wget -q  https://cdn.azul.com/zulu/bin/zulu11.48.21-ca-jdk11.0.11-linux_amd64.deb
 dpkg -i zulu11.48.21-ca-jdk11.0.11-linux_amd64.deb > /dev/null
 wget -q https://github.com/minima-global/Minima/raw/master/jar/minima.jar
